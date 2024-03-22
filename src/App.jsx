@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Hello from './Hello';
 import Login from './Login';
@@ -7,12 +7,33 @@ import Product from './components/Product';
 
 function App() {
     //javascipt codes are here
-
     //const productName = 'shirt';
-
-    const [firstName, setFirstName] = useState('esra');
+    /*  const [firstName, setFirstName] = useState('esra');
     const [names, setNames] = useState(['esra', 'volkan', 'tom', 'jerry']);
-    const [userInfo, setUserInfo] = useState({ username: 'esra, userId:1' });
+    const [userInfo, setUserInfo] = useState({ username: 'esra, userId:1' }); */
+
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('second');
+
+    useEffect(() => {
+        console.log('her zaman calisir');
+    });
+
+    useEffect(() => {
+        console.log('ilk render edildiginde calisir');
+    }, []);
+
+    useEffect(() => {
+        console.log(
+            'ilk render edildiginde ve firstname state degeri degistiginde calisir'
+        );
+    }, [firstName]);
+
+    useEffect(() => {
+        console.log(
+            'ilk render edildiginde ve lastname state degeri degistiginde calisir'
+        );
+    }, [lastName]);
 
     return (
         //html codes are here
@@ -28,14 +49,26 @@ function App() {
             <Product />
             </Container>
             */}
-            {firstName}
+            {/*   {firstName}
             <button onClick={() => setFirstName('esra arnus aslan')}>
                 Click
             </button>
             {names.map((name, index) => (
                 <div key={index}>{name}</div>
             ))}
-            {userInfo.username} {userInfo.userId}
+            {userInfo.username} {userInfo.userId} */}
+
+            <div>
+                <button onClick={() => setFirstName('esra')}>
+                    Adi degistir
+                </button>
+            </div>
+
+            <div>
+                <button onClick={() => setLastName('arnus')}>
+                    Soyadi degistir
+                </button>
+            </div>
         </div>
     );
 }
