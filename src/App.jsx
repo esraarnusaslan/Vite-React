@@ -12,7 +12,7 @@ function App() {
     const [names, setNames] = useState(['esra', 'volkan', 'tom', 'jerry']);
     const [userInfo, setUserInfo] = useState({ username: 'esra, userId:1' }); */
 
-    const [firstName, setFirstName] = useState('');
+    /*   const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('second');
 
     useEffect(() => {
@@ -33,8 +33,14 @@ function App() {
         console.log(
             'ilk render edildiginde ve lastname state degeri degistiginde calisir'
         );
-    }, [lastName]);
+    }, [lastName]); */
 
+    const [vize1, setVize1] = useState(0);
+    const [vize2, setVize2] = useState(0);
+
+    const ortalamaBul = () => {
+        
+    }
     return (
         //html codes are here
         <div>
@@ -56,7 +62,7 @@ function App() {
             {names.map((name, index) => (
                 <div key={index}>{name}</div>
             ))}
-            {userInfo.username} {userInfo.userId} */}
+            {userInfo.username} {userInfo.userId}
 
             <div>
                 <button onClick={() => setFirstName('esra')}>
@@ -68,6 +74,27 @@ function App() {
                 <button onClick={() => setLastName('arnus')}>
                     Soyadi degistir
                 </button>
+            </div>
+             */}
+
+            <div>
+                <div>
+                    <input
+                        type="number"
+                        value={vize1}
+                        onChange={(e) => setVize1(Number(e.target.value))}
+                    />
+                </div>
+                <div>
+                    <input
+                        type="number"
+                        value={vize2}
+                        onChange={(e) => setVize2(Number(e.target.value))}
+                    />
+                </div>
+                <div>
+                    <button>Bul</button>
+                </div>
             </div>
         </div>
     );
