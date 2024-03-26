@@ -39,8 +39,20 @@ function App() {
     const [vize2, setVize2] = useState(0);
 
     const ortalamaBul = () => {
-        
-    }
+        debugger
+        const toplamSonuc = topla()/2;
+        yazdir(toplamSonuc);
+    };
+
+    const topla = () => {
+        debugger
+        const toplam = vize1 + vize2;
+        return toplam;
+    };
+    const yazdir = (sonuc) => {
+        console.log('ortalama:' + sonuc);
+    };
+
     return (
         //html codes are here
         <div>
@@ -93,7 +105,7 @@ function App() {
                     />
                 </div>
                 <div>
-                    <button>Bul</button>
+                    <button onClick={ortalamaBul}>Bul</button>
                 </div>
             </div>
         </div>
