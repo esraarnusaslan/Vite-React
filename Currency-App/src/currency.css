@@ -1,0 +1,40 @@
+.currency-div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 550px;
+    height: 200px;
+    border: 1px solid rgb(69, 226, 17);
+    background-color: rgba(0, 0, 0, 0.615);
+    border-radius: 14px;
+}
+
+.input-div {
+    display: flex;
+    gap: 10px;
+}
+
+.amount,
+.result {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(69, 226, 17);
+    color: rgba(0, 0, 0, 0.939);
+}
+
+.from-currency-option,
+.to-currency-option,
+.button {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.arrow {
+    font-size: 30px;
+    color: rgb(69, 226, 17);
+}
